@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1>{{ message }}</h1>
+    <div v-for="court in courts" :key="court.id">
+      <h1>{{ court.name }}</h1>
+      <p>{{ court.address }}</p>
+    </div>
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+<style></style>
 
+<script>
+import axios from "axios";
 export default {
-  name: "Home",
-  components: {
-    HelloWorld,
+  data: function () {
+    return {
+      message: "Welcome to Local Courts!",
+      courts: [],
+    };
+  },
+  created: function () {
+    this.indexCourts();
+  },
+  methods: {
+    indexCourts: function () {
+      axios.get("/courts").then((response) => {
+        this.courts = response.data;
+        console.log("All Courts:", this.courts);
+      });
+    },
   },
 };
 </script>
