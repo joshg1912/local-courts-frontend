@@ -10,6 +10,8 @@
       <router-link to="/logout">Logout</router-link>
       |
       <router-link to="/courts/new">Create Court</router-link>
+      |
+      <router-link to="/mycourts">My Courts</router-link>
     </div>
     <router-view />
   </div>
