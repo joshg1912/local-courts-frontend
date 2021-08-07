@@ -58,7 +58,7 @@ export default {
     // displayMap: function () {
     //   var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
 
-    //   mapboxgl.accessToken = "pk.eyJ1Ijoid29ybW10IiwiYSI6ImNrczBrMzJycDFrbGoydm5wc2ZiamlqNGgifQ.I2AHKCY7cTV3-kuN2uUexQ";
+    //
     //   var map = new mapboxgl.Map({
     //     container: "map",
     //     style: "mapbox://styles/mapbox/streets-v11",

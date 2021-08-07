@@ -5,6 +5,7 @@
     <p>Fees: ${{ court.fees }}</p>
     <p>Facility: {{ court.facility }}</p>
     <p>Lights: {{ court.lights }}</p>
+
     <div id="map"></div>
     <router-link to="/home">Back</router-link>
   </div>
@@ -35,22 +36,15 @@ export default {
   methods: {
     displayMap: function () {
       var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
-      mapboxgl.accessToken = "pk.eyJ1Ijoid29ybW10IiwiYSI6ImNrczBrMzJycDFrbGoydm5wc2ZiamlqNGgifQ.I2AHKCY7cTV3-kuN2uUexQ";
+      mapboxgl.accessToken =
+
       var map = new mapboxgl.Map({
         container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
-        center: [-97.753, 30.375],
+        style: "mapbox://styles/wormmt/ckrgstreg40fu18pn38f7nj6o",
+        center: [-97.767, 30.2412],
         zoom: 15,
       });
       console.log(map);
-      document.getElementById("map").addEventListener("click", () => {
-        // Fly to a random location by offsetting the point -74.50, 40
-        // by up to 5 degrees.
-        map.flyTo({
-          center: [-97.75, 30.37],
-          essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-        });
-      });
     },
   },
 };
