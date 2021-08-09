@@ -5,8 +5,9 @@
     <p>Facility: {{ court.facility }}</p>
     <p>Lights: {{ court.lights }}</p>
     <p>Address: {{ court.address }}. Austin, TX</p>
-
-    <div id="map"></div>
+    <p v-if="$parent.getUserId() == court.user_id">
+      <router-link v-bind:to="`/courts/${court.id}/edit`"><button>Edit Court</button></router-link>
+    </p>
     <router-link to="/home">Back</router-link>
   </div>
 </template>
