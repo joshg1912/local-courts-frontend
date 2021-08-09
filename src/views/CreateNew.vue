@@ -22,6 +22,9 @@
         <label>Address:</label>
         <input type="text" v-model="newCourtParams.address" />
       </div>
+      <label>Zipcode:</label>
+      <input type="text" v-model="newCourtParams.zipcode" />
+      <div></div>
       <input type="submit" value="Submit" />
     </form>
   </div>

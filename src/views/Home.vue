@@ -1,16 +1,17 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-    <p>Search by name</p>
+    <p>Search by name, zipcode</p>
     <input v-model="searchFilter" />
-    <div v-for="court in filterBy(courts, searchFilter, 'name')" :key="court.id" id="container">
+    <div v-for="court in filterBy(courts, searchFilter, 'zipcode', 'name')" :key="court.id" id="container">
       <h1>
         <hr />
         <router-link v-bind:to="`/courts/${court.id}`">
           {{ court.name }}
         </router-link>
       </h1>
-      <p>{{ court.address }}</p>
+      <p>{{ court.address }}. Austin,TX</p>
+      <p>{{ court.zipcode }}</p>
       <dialog id="court-details">
         <h1>Court Details</h1>
         <p>Lights: {{ court.lights }}</p>
@@ -36,9 +37,7 @@ export default {
       searchFilter: "",
     };
   },
-  // mounted: function () {
-  //   this.displayMap();
-  // },
+
   created: function () {
     this.indexCourts();
   },
@@ -55,16 +54,6 @@ export default {
       this.currentCourt = court;
       document.querySelector("#court-details").showModal();
     },
-    // displayMap: function () {
-    //   var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
-
-    //
-    //   var map = new mapboxgl.Map({
-    //     container: "map",
-    //     style: "mapbox://styles/mapbox/streets-v11",
-    //   });
-    //   console.log(map);
-    //},
   },
 };
 </script>
