@@ -37,7 +37,7 @@ export default {
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("user_id", response.data.user_id);
           console.log(response.data);
-          this.$router.push("/home");
+          this.$router.push("/");
         })
         .catch((error) => {
           console.log(error.response);

@@ -1,8 +1,12 @@
 <template>
   <div class="create-court">
     <h1>Create A Court</h1>
+
     <form v-on:submit.prevent="createCourt()" class="form">
       <div>
+        <ul>
+          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+        </ul>
         <label>Name:</label>
         <input type="text" v-model="newCourtParams.name" />
       </div>
@@ -26,15 +30,16 @@
       <input type="text" v-model="newCourtParams.zipcode" />
       <div></div>
       <input type="submit" value="Submit" />
+      <p><router-link to="/">Back</router-link></p>
     </form>
   </div>
 </template>
 <style>
-form {
-  /* Center the form on the page */
+/* form {
+ 
   margin: 0 auto;
   width: 400px;
-  /* Form outline */
+  
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 1em;
@@ -46,7 +51,7 @@ ul {
 }
 form li + li {
   margin-top: 1em;
-}
+} */
 </style>
 <script>
 import axios from "axios";
@@ -55,14 +60,21 @@ export default {
   data: function () {
     return {
       newCourtParams: {},
+      errors: [],
+      status: "",
     };
   },
   methods: {
     createCourt: function () {
-      axios.post("/courts", this.newCourtParams).then((response) => {
-        this.$router.push("/home");
-        console.log(response.data);
-      });
+      axios
+        .post("/courts", this.newCourtParams)
+        .then((response) => {
+          this.$router.push("/");
+          console.log(response.data);
+        })
+        .catch((error) => {
+          this.status = error.response.status;
+        });
     },
   },
 };

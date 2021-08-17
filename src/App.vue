@@ -1,42 +1,90 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/home">Home |</router-link>
-      <router-link to="/signup" v-if="!isLoggedIn()">Signup |</router-link>
-      <router-link to="/login" v-if="!isLoggedIn()">Login |</router-link>
+    <nav
+      class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg"
+      color-on-scroll="100"
+      id="sectionsNav"
+    >
+      <div class="container">
+        <div class="navbar-translate">
+          <a class="navbar-brand" href="/">Local Courts</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/signup" target="_blank">
+                <i class="material-icons">assignment_ind</i>
+                Signup
+              </a>
+            </li>
 
-      <router-link to="/logout" v-if="isLoggedIn()">Logout |</router-link>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">
+                <i class="material-icons">login</i>
+                Login
+              </a>
+            </li>
 
-      <router-link to="/courts/new">Create Court |</router-link>
-
-      <router-link to="/mycourts">My Courts</router-link>
-    </div>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout" target="_blank">
+                <i class="material-icons">logout</i>
+                Logout
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/mycourts" target="_blank">
+                <i class="material-icons">sports_tennis</i>
+                My Courts
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/courts/new" target="_blank">
+                <i class="material-icons">sports_tennis</i>
+                Create A Court
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <router-view />
+    <footer class="footer" data-background-color="black">
+      <div class="container">
+        <nav class="float-left">
+          <ul>
+            <li>
+              <a href="https://www.creative-tim.com/">Creative Tim</a>
+            </li>
+            <li>
+              <a href="https://www.creative-tim.com/presentation">About Us</a>
+            </li>
+            <li>
+              <a href="https://www.creative-tim.com/blog">Blog</a>
+            </li>
+            <li>
+              <a href="https://www.creative-tim.com/license">Licenses</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="copyright float-right">&copy;</div>
+      </div>
+    </footer>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style></style>
 <script>
 export default {
   methods: {
