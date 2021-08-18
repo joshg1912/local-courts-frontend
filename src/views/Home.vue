@@ -64,7 +64,7 @@ export default {
     displayMap: function () {
       var mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
 
-      mapboxgl.accessToken = "pk.eyJ1Ijoid29ybW10IiwiYSI6ImNrczg1NWV4djJ4Y2sydnFtcDgyNXlkdmMifQ._rDK4Ue_fL-uOtpBPIczww";
+      mapboxgl.accessToken = process.env.VUE_APP_KEY;
 
       var map = new mapboxgl.Map({
         container: "map",
