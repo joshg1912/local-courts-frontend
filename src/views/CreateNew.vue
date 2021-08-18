@@ -1,6 +1,44 @@
 <template>
-  <div class="create-court">
-    <h1>Create A Court</h1>
+  <div class="section section-signup page-header" style="background-image: url('./assets/img/background2.png')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="card card-login">
+            <form class="form" v-on:submit.prevent="createCourt()">
+              <p class="description text-center">Create A Court</p>
+              <div class="card-body">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">mail</i>
+                    </span>
+                  </div>
+                  <input type="name" class="form-control" placeholder="Court Name" v-model="newCourtParams.name" />
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">lock_outline</i>
+                    </span>
+                  </div>
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    v-model="newCourtParams.facility"
+                  />
+                </div>
+              </div>
+              <div class="footer text-center">
+                <button v-on:click="createCourt()" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <h1>Create A Court</h1>
 
     <form v-on:submit.prevent="createCourt()" class="form">
       <div>
@@ -31,8 +69,7 @@
       <div></div>
       <input type="submit" value="Submit" />
       <p><router-link to="/">Back</router-link></p>
-    </form>
-  </div>
+    </form> -->
 </template>
 <style>
 /* form {
