@@ -50,7 +50,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/courts/new">
+              <a class="nav-link" href="/new">
                 <i class="material-icons">sports_tennis</i>
                 Create A Court
               </a>

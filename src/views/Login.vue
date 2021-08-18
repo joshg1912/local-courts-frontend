@@ -1,5 +1,8 @@
 <template>
-  <div class="section section-signup page-header" style="background-image: url('./assets/img/background2.png')">
+  <div
+    class="section section-signup page-header header-filter clear-filter purple-filter"
+    style="background-image: url('./assets/img/background2.png')"
+  >
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 mx-auto">
@@ -39,7 +42,11 @@
     </div>
   </div>
 </template>
-
+<style>
+.card {
+  margin-top: 100px;
+}
+</style>
 <script>
 import axios from "axios";
 
