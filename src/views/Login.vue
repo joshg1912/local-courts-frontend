@@ -1,20 +1,42 @@
 <template>
-  <div class="login">
-    <form v-on:submit.prevent="submit()">
-      <h1>Login</h1>
-      <ul>
-        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-      </ul>
-      <div>
-        <label>Email:</label>
-        <input type="email" v-model="newSessionParams.email" />
+  <div class="section section-signup page-header" style="background-image: url('./assets/img/background2.png')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="card card-login">
+            <form class="form" v-on:submit.prevent="submit()">
+              <p class="description text-center">Login With Email</p>
+              <div class="card-body">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">mail</i>
+                    </span>
+                  </div>
+                  <input type="email" class="form-control" placeholder="Email" v-model="newSessionParams.email" />
+                </div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="material-icons">lock_outline</i>
+                    </span>
+                  </div>
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                    v-model="newSessionParams.password"
+                  />
+                </div>
+              </div>
+              <div class="footer text-center">
+                <button v-on:click="submit()" class="btn btn-primary">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" v-model="newSessionParams.password" />
-      </div>
-      <input type="submit" value="Submit" />
-    </form>
+    </div>
   </div>
 </template>
 
@@ -37,7 +59,7 @@ export default {
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("user_id", response.data.user_id);
           console.log(response.data);
-          this.$router.push("/");
+          this.$router.push("/courts");
         })
         .catch((error) => {
           console.log(error.response);

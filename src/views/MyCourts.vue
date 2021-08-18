@@ -10,7 +10,7 @@
       <p>Address: {{ court.address }}</p>
       <router-link v-bind:to="`/courts/${court.id}/edit`"><button>Edit Court</button></router-link>
     </div>
-    <p><router-link to="/">Back</router-link></p>
+    <p><router-link to="/courts">Back</router-link></p>
   </div>
 </template>
 <script>

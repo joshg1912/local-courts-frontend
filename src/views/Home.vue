@@ -1,22 +1,6 @@
 <template>
-  <div class="home">
-    <div
-      class="page-header header-filter clear-filter purple-filter"
-      data-parallax="true"
-      style="background-image: url('./assets/img/background2.png')"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <div class="brand">
-              <h1>Welcome To Local Courts</h1>
-              <h3>find courts in your area</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="map"></div>
+  <div class="container">
+    <div id="map" class="map"></div>
     <p>Search by name, zipcode</p>
     <input v-model="searchFilter" />
     <div v-for="court in filterBy(courts, searchFilter, 'zipcode', 'name', 'lights')" :key="court.id" id="container">
@@ -28,14 +12,6 @@
       </h1>
       <p>{{ court.address }}. Austin,TX</p>
       <p>{{ court.zipcode }}</p>
-      <!-- <dialog id="court-details">
-        <h1>Court Details</h1>
-        <p>Lights: {{ court.lights }}</p>
-        <p>Fees: $ {{ court.fees }}</p>
-        <p>Facility: {{ court.facility }}</p>
-        <button>Close</button>
-      </dialog>
-      <button v-on:click="showCourt(court)">More Info</button> -->
     </div>
   </div>
 </template>
@@ -44,14 +20,12 @@
 #map {
   height: 400px;
   width: auto;
+  margin-top: 150px;
 }
-.mapboxgl-marker {
-  height: 20px;
-  width: 20px;
-  z-index: 5;
-  border: 1px solid black;
-  border-radius: 50%;
-  background-color: #305bad;
+
+.mapboxgl-popup {
+  max-width: 400px;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 </style>
 

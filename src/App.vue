@@ -8,7 +8,7 @@
       <div class="container">
         <div class="navbar-translate">
           <a class="navbar-brand" href="/">Local Courts</a>
-          <button
+          <!-- <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -19,38 +19,38 @@
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> -->
         </div>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/signup" target="_blank">
+            <li v-if="!isLoggedIn()" class="nav-item">
+              <a class="nav-link" href="/signup">
                 <i class="material-icons">assignment_ind</i>
                 Signup
               </a>
             </li>
 
-            <li class="nav-item">
+            <li v-if="!isLoggedIn()" class="nav-item">
               <a class="nav-link" href="/login">
                 <i class="material-icons">login</i>
                 Login
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/logout" target="_blank">
+            <li v-if="isLoggedIn()" class="nav-item">
+              <a class="nav-link" href="/logout">
                 <i class="material-icons">logout</i>
                 Logout
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/mycourts" target="_blank">
+              <a class="nav-link" href="/mycourts">
                 <i class="material-icons">sports_tennis</i>
                 My Courts
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/courts/new" target="_blank">
+              <a class="nav-link" href="/courts/new">
                 <i class="material-icons">sports_tennis</i>
                 Create A Court
               </a>
@@ -60,8 +60,8 @@
       </div>
     </nav>
     <router-view />
-    <footer class="footer" data-background-color="black">
-      <div class="container">
+    <footer class="container" data-background-color="black">
+      <div class="footer">
         <nav class="float-left">
           <ul>
             <li>

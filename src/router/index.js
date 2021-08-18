@@ -9,13 +9,14 @@ import MyCourts from "../views/MyCourts.vue";
 import CourtsShow from "../views/CourtsShow.vue";
 import CourtEdit from "../views/CourtEdit.vue";
 import ApiTest from "../views/ApiTest.vue";
+import Homepage from "../views/Homepage.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: "/courts",
+    name: "courts",
     component: Home,
   },
   { path: "/signup", name: "signup", component: Signup },
@@ -26,6 +27,7 @@ const routes = [
   { path: "/courts/:id", name: "courts-show", component: CourtsShow },
   { path: "/courts/:id/edit", name: "court-edit", component: CourtEdit },
   { path: "/test", name: "test", component: ApiTest },
+  { path: "/", name: "homepage", component: Homepage },
 ];
 
 const router = new VueRouter({

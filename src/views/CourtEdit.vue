@@ -61,7 +61,7 @@ export default {
     destroyCourt: function () {
       axios.delete(`/courts/${this.$route.params.id}`).then((response) => {
         console.log(response.data);
-        this.$router.push("/home");
+        this.$router.push("/courts");
       });
     },
   },

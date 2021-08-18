@@ -52,7 +52,7 @@
       <img v-bind:src="imageurl[8]" />
       <!-- this is Anderson High -->
     </p>
-    <p><router-link to="/">Back</router-link></p>
+    <p><router-link to="/courts">Back</router-link></p>
   </div>
 </template>
 <style></style>
