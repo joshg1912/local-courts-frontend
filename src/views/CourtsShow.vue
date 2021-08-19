@@ -1,70 +1,65 @@
 <template>
-  <body>
-    <div class="info">
-      <div class="main main-raised text-center mt-auto mr-auto ml-auto">
-        <h1>{{ court.name }}</h1>
-        <p>Fees: ${{ court.fees }}</p>
-        <p>Facility: {{ court.facility }}</p>
-        <p>Lights: {{ court.lights }}</p>
-        <p>Address: {{ court.address }}. Austin, TX</p>
-        <p v-if="$parent.getUserId() == court.user_id">
-          <router-link v-bind:to="`/courts/${court.id}/edit`"><button>Edit Court</button></router-link>
-        </p>
-        <p v-if="17 === court.id">
-          <img v-bind:src="imageurl[3]" />
-          <!-- this is Crockett Hs -->
-        </p>
-        <p v-if="18 === court.id">
-          <img v-bind:src="imageurl[4]" />
-          <!-- this is St Edwards -->
-        </p>
-        <p v-if="19 === court.id">
-          <img v-bind:src="imageurl[6]" />
-          <!-- this is Akins HS -->
-        </p>
-        <p v-if="20 === court.id">
-          <img v-bind:src="imageurl[9]" />
-          <!-- this is Bowie HS -->
-        </p>
-        <p v-if="21 === court.id">
-          <img v-bind:src="imageurl[1]" />
-          <!-- this is Joslin Park -->
-        </p>
-        <p v-if="22 === court.id">
-          <img v-bind:src="imageurl[5]" />
-          <!-- this is Ojeda HS -->
-        </p>
-        <p v-if="23 === court.id">
-          <img v-bind:src="imageurl[10]" />
-          <!-- this is Mendez MS -->
-        </p>
-        <p v-if="3 === court.id">
-          <img v-bind:src="imageurl[0]" />
-          <!-- this is West Austin Park -->
-        </p>
-        <p v-if="24 === court.id">
-          <img v-bind:src="imageurl[7]" />
-          <!-- this is Covington MS -->
-        </p>
-        <p v-if="5 === court.id">
-          <img v-bind:src="imageurl[2]" />
-          <!-- this is South Austin P&R -->
-        </p>
-        <p v-if="6 === court.id">
-          <img v-bind:src="imageurl[8]" />
-          <!-- this is Anderson High -->
-        </p>
-        <p><router-link to="/courts" tag="button" class="btn btn-primary btn-round">Back</router-link></p>
-      </div>
+  <div class="info">
+    <div class="main main-raised text-center mt-auto mr-auto ml-auto">
+      <h1>{{ court.name }}</h1>
+      <p>Fees: ${{ court.fees }}</p>
+      <p>Facility: {{ court.facility }}</p>
+      <p>Lights: {{ court.lights }}</p>
+      <p>Address: {{ court.address }}. Austin, TX</p>
+      <p v-if="$parent.getUserId() == court.user_id">
+        <router-link v-bind:to="`/courts/${court.id}/edit`">
+          <button class="btn btn-primary btn-round">Edit Court</button>
+        </router-link>
+      </p>
+      <p v-if="17 === court.id">
+        <img v-bind:src="imageurl[3]" />
+        <!-- this is Crockett Hs -->
+      </p>
+      <p v-if="18 === court.id">
+        <img v-bind:src="imageurl[4]" />
+        <!-- this is St Edwards -->
+      </p>
+      <p v-if="19 === court.id">
+        <img v-bind:src="imageurl[6]" />
+        <!-- this is Akins HS -->
+      </p>
+      <p v-if="20 === court.id">
+        <img v-bind:src="imageurl[9]" />
+        <!-- this is Bowie HS -->
+      </p>
+      <p v-if="21 === court.id">
+        <img v-bind:src="imageurl[1]" />
+        <!-- this is Joslin Park -->
+      </p>
+      <p v-if="22 === court.id">
+        <img v-bind:src="imageurl[5]" />
+        <!-- this is Ojeda HS -->
+      </p>
+      <p v-if="23 === court.id">
+        <img v-bind:src="imageurl[10]" />
+        <!-- this is Mendez MS -->
+      </p>
+      <p v-if="3 === court.id">
+        <img v-bind:src="imageurl[0]" />
+        <!-- this is West Austin Park -->
+      </p>
+      <p v-if="24 === court.id">
+        <img v-bind:src="imageurl[7]" />
+        <!-- this is Covington MS -->
+      </p>
+      <p v-if="5 === court.id">
+        <img v-bind:src="imageurl[2]" />
+        <!-- this is South Austin P&R -->
+      </p>
+      <p v-if="6 === court.id">
+        <img v-bind:src="imageurl[8]" />
+        <!-- this is Anderson High -->
+      </p>
+      <p><router-link to="/courts" tag="button" class="btn btn-primary btn-round">Back</router-link></p>
     </div>
-  </body>
+  </div>
 </template>
-<style>
-body {
-  background-image: url("/assets/img/background2.png");
-  background-repeat: no-repeat;
-}
-</style>
+<style></style>
 <script>
 import axios from "axios";
 

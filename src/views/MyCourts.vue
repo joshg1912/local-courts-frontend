@@ -5,7 +5,7 @@
         <h1>{{ message }}</h1>
         <div v-for="court in courts" :key="court.id">
           <div class="description text-center">
-            <!-- <hr /> -->
+            <hr />
             <h2>{{ court.name }}</h2>
             <p>Facility: {{ court.facility }}</p>
             <p>Fees: $ {{ court.fees }}</p>

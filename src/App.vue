@@ -60,8 +60,8 @@
       </div>
     </nav>
     <router-view />
-    <footer class="container" data-background-color="black">
-      <div class="footer bottom-0">
+    <footer class="footer" data-background-color="black">
+      <div class="footer">
         <nav class="float-left">
           <ul>
             <li>
@@ -83,8 +83,17 @@
     </footer>
   </div>
 </template>
-
-<style></style>
+<style>
+.float-left {
+  position: fixed;
+  bottom: 77px;
+}
+body {
+  background-image: url("/assets/img/background2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
 <script>
 export default {
   methods: {
