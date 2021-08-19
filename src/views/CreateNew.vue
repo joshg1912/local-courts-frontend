@@ -1,78 +1,80 @@
 <template>
-  <div
+  <!-- <div
     class="section section-signup page-header header-filter clear-filter purple-filter"
     style="background-image: url('./assets/img/background2.png')"
-  >
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mx-auto">
-          <div class="card card-login">
-            <form v-on:submit.prevent="createCourt()" class="form">
-              <p class="description text-center">Create A Court</p>
-              <div class="card-body">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="material-icons">mail</i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="Court Name" v-model="newCourtParams.name" />
+  > -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mx-auto">
+        <div class="card card-login">
+          <form v-on:submit.prevent="createCourt()" class="form">
+            <p class="description text-center">Create A Court</p>
+            <div class="card-body">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">add_circle_outline</i>
+                  </span>
                 </div>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="material-icons">lock_outline</i>
-                    </span>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Public or Private"
-                    v-model="newCourtParams.facility"
-                  />
-                </div>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="material-icons">lock_outline</i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="fees" v-model="newCourtParams.fees" />
-                </div>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="material-icons">lock_outline</i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="lights" v-model="newCourtParams.lights" />
-                </div>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="material-icons">lock_outline</i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="address" v-model="newCourtParams.address" />
-                </div>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">
-                      <i class="material-icons">lock_outline</i>
-                    </span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="zipcode" v-model="newCourtParams.zipcode" />
-                </div>
+
+                <input type="text" class="form-control" placeholder="Court Name" v-model="newCourtParams.name" />
               </div>
-              <div class="footer text-center">
-                <button v-on:click="createCourt()" class="btn btn-primary">Submit</button>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">add_circle_outline</i>
+                  </span>
+                </div>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Public or Private"
+                  v-model="newCourtParams.facility"
+                />
               </div>
-            </form>
-          </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">add_circle_outline</i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Fees" v-model="newCourtParams.fees" />
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">add_circle_outline</i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Lights" v-model="newCourtParams.lights" />
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">add_circle_outline</i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Address" v-model="newCourtParams.address" />
+              </div>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="material-icons">add_circle_outline</i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Zipcode" v-model="newCourtParams.zipcode" />
+              </div>
+            </div>
+            <div class="footer text-center">
+              <button v-on:click="createCourt()" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+  <!-- </div> -->
 </template>
 <style></style>
 <script>

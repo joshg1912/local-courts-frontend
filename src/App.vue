@@ -7,7 +7,7 @@
     >
       <div class="container">
         <div class="navbar-translate">
-          <a class="navbar-brand" href="/">Local Courts</a>
+          <a class="navbar-brand" href="/courts">Local Courts</a>
           <!-- <button
             class="navbar-toggler"
             type="button"
@@ -43,13 +43,13 @@
                 Logout
               </a>
             </li>
-            <li class="nav-item">
+            <li v-if="isLoggedIn()" class="nav-item">
               <a class="nav-link" href="/mycourts">
                 <i class="material-icons">sports_tennis</i>
                 My Courts
               </a>
             </li>
-            <li class="nav-item">
+            <li v-if="isLoggedIn()" class="nav-item">
               <a class="nav-link" href="/new">
                 <i class="material-icons">sports_tennis</i>
                 Create A Court
@@ -61,7 +61,7 @@
     </nav>
     <router-view />
     <footer class="container" data-background-color="black">
-      <div class="footer">
+      <div class="footer bottom-0">
         <nav class="float-left">
           <ul>
             <li>

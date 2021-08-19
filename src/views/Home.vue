@@ -1,17 +1,20 @@
 <template>
   <div class="container">
     <div id="map" class="map"></div>
-    <p>Search by name, zipcode</p>
-    <input v-model="searchFilter" />
-    <div v-for="court in filterBy(courts, searchFilter, 'zipcode', 'name', 'lights')" :key="court.id" id="container">
-      <h1>
-        <hr />
-        <router-link v-bind:to="`/courts/${court.id}`">
-          {{ court.name }}
-        </router-link>
-      </h1>
-      <p>{{ court.address }}. Austin,TX</p>
-      <p>{{ court.zipcode }}</p>
+    <div class="text-center">
+      <input v-model="searchFilter" placeholder="search by zipcode" />
+    </div>
+    <div class="main main-raised text-center mt-auto">
+      <div v-for="court in filterBy(courts, searchFilter, 'zipcode', 'name', 'lights')" :key="court.id">
+        <h1>
+          <hr />
+          <router-link v-bind:to="`/courts/${court.id}`">
+            {{ court.name }}
+          </router-link>
+        </h1>
+        <p>{{ court.address }}. Austin,TX</p>
+        <p>{{ court.zipcode }}</p>
+      </div>
     </div>
   </div>
 </template>
