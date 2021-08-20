@@ -19,7 +19,7 @@
         <img v-bind:src="imageurl[4]" />
         <!-- this is St Edwards -->
       </p>
-      <p v-if="19 === court.id">
+      <p v-if="34 === court.id">
         <img v-bind:src="imageurl[6]" />
         <!-- this is Akins HS -->
       </p>

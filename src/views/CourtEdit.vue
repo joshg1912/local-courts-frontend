@@ -63,10 +63,13 @@ export default {
       });
     },
     destroyCourt: function () {
-      axios.delete(`/courts/${this.$route.params.id}`).then((response) => {
-        console.log(response.data);
-        this.$router.push("/courts");
-      });
+      var result = confirm("Delete Court?");
+      if (result) {
+        axios.delete(`/courts/${this.$route.params.id}`).then((response) => {
+          console.log(response.data);
+          this.$router.push("/courts");
+        });
+      }
     },
   },
 };

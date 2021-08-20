@@ -13,7 +13,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">add_circle_outline</i>
+                    <i class="material-icons">label_important</i>
                   </span>
                 </div>
 
@@ -22,7 +22,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">add_circle_outline</i>
+                    <i class="material-icons">label_important</i>
                   </span>
                 </div>
 
@@ -36,7 +36,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">add_circle_outline</i>
+                    <i class="material-icons">label_important</i>
                   </span>
                 </div>
                 <input type="text" class="form-control" placeholder="Fees" v-model="newCourtParams.fees" />
@@ -44,7 +44,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">add_circle_outline</i>
+                    <i class="material-icons">label_important</i>
                   </span>
                 </div>
                 <input type="text" class="form-control" placeholder="Lights" v-model="newCourtParams.lights" />
@@ -52,7 +52,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">add_circle_outline</i>
+                    <i class="material-icons">label_important</i>
                   </span>
                 </div>
                 <input type="text" class="form-control" placeholder="Address" v-model="newCourtParams.address" />
@@ -60,7 +60,7 @@
               <div class="input-group">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="material-icons">add_circle_outline</i>
+                    <i class="material-icons">label_important</i>
                   </span>
                 </div>
                 <input type="text" class="form-control" placeholder="Zipcode" v-model="newCourtParams.zipcode" />
