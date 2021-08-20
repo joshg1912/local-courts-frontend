@@ -4276,6 +4276,7 @@ tbody.collapse.show {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+  color: rgb(0, 0, 0);
 }
 
 .nav-link:hover,
@@ -4284,7 +4285,7 @@ tbody.collapse.show {
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: #000000;
 }
 
 .nav-tabs {
@@ -4307,7 +4308,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link.disabled {
-  color: #6c757d;
+  color: #000000;
   background-color: transparent;
   border-color: transparent;
 }
@@ -4408,6 +4409,7 @@ tbody.collapse.show {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  color: rgb(0, 0, 0);
 }
 
 .navbar-collapse {

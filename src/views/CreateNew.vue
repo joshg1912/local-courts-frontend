@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 mx-auto">
         <div class="card card-login">
-          <form v-on:submit.prevent="createCourt()" class="form">
+          <form v-on:click.prevent="createCourt()" class="form">
             <p class="description text-center">Create A Court</p>
             <div class="card-body">
               <div class="input-group">
@@ -67,7 +67,7 @@
               </div>
             </div>
             <div class="footer text-center">
-              <button v-on:click="createCourt()" class="btn btn-primary">Submit</button>
+              <button class="btn btn-primary">Submit</button>
             </div>
           </form>
         </div>

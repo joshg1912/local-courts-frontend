@@ -1,6 +1,6 @@
 <template>
-  <div class="court-edit">
-    <div class="container">
+  <div class="container">
+    <div class="court-edit">
       <div class="main main-raised text-center mt-auto mr-auto ml-auto">
         <form v-on:submit.prevent="updateCourt()">
           <h1>Edit Court</h1>
@@ -39,6 +39,14 @@
     </div>
   </div>
 </template>
+<style>
+.court-edit {
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+  height: 530px;
+}
+</style>
 <script>
 import axios from "axios";
 

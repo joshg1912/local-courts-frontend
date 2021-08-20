@@ -62,22 +62,7 @@
     <router-view />
     <footer class="footer" data-background-color="black">
       <div class="footer">
-        <nav class="float-left">
-          <ul>
-            <li>
-              <a href="https://www.creative-tim.com/">Creative Tim</a>
-            </li>
-            <li>
-              <a href="https://www.creative-tim.com/presentation">About Us</a>
-            </li>
-            <li>
-              <a href="https://www.creative-tim.com/blog">Blog</a>
-            </li>
-            <li>
-              <a href="https://www.creative-tim.com/license">Licenses</a>
-            </li>
-          </ul>
-        </nav>
+        <nav class="float-left"></nav>
         <div class="copyright float-right">&copy;</div>
       </div>
     </footer>

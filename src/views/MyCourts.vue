@@ -1,7 +1,7 @@
 <template>
-  <div class="main main-raised">
-    <div class="col-md-6 ml-auto mr-auto">
-      <div class="courts-new text-center">
+  <div class="courts-new text-center">
+    <div class="main main-raised">
+      <div class="col-md-6 ml-auto mr-auto">
         <h1 class="description">{{ message }}</h1>
         <div v-for="court in courts" :key="court.id">
           <div class="description text-center">
@@ -22,8 +22,14 @@
   </div>
 </template>
 <style>
+.main {
+  margin-left: 150px;
+  margin-right: 150px;
+}
 .courts-new {
-  margin-top: 150px;
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 
 .description {

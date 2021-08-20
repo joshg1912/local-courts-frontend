@@ -1,11 +1,11 @@
 <template>
   <div class="info">
     <div class="main main-raised text-center mt-auto mr-auto ml-auto">
-      <h1>{{ court.name }}</h1>
-      <p>Fees: ${{ court.fees }}</p>
-      <p>Facility: {{ court.facility }}</p>
-      <p>Lights: {{ court.lights }}</p>
-      <p>Address: {{ court.address }}. Austin, TX</p>
+      <h1 class="link">{{ court.name }}</h1>
+      <p class="text-primary">Fees: ${{ court.fees }}</p>
+      <p class="text-primary">Facility: {{ court.facility }}</p>
+      <p class="text-primary">Lights: {{ court.lights }}</p>
+      <p class="text-primary">Address: {{ court.address }}. Austin, TX</p>
       <p v-if="$parent.getUserId() == court.user_id">
         <router-link v-bind:to="`/courts/${court.id}/edit`">
           <button class="btn btn-primary btn-round">Edit Court</button>
@@ -59,7 +59,11 @@
     </div>
   </div>
 </template>
-<style></style>
+<style>
+.link {
+  color: rgb(0, 138, 73);
+}
+</style>
 <script>
 import axios from "axios";
 
