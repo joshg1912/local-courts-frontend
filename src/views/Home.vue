@@ -11,12 +11,12 @@
         <div class="description text-center">
           <h1>
             <hr />
-            <router-link v-bind:to="`/courts/${court.id}`">
+            <router-link v-bind:to="`/courts/${court.id}`" class="link">
               {{ court.name }}
             </router-link>
           </h1>
-          <p>{{ court.address }}. Austin,TX</p>
-          <p>{{ court.zipcode }}</p>
+          <p class="text-primary">{{ court.address }}. Austin,TX</p>
+          <p class="text-primary">{{ court.zipcode }}</p>
         </div>
       </div>
     </div>
@@ -33,6 +33,10 @@
 .mapboxgl-popup {
   max-width: 400px;
   font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.link {
+  color: rgb(0, 138, 73);
 }
 </style>
 
