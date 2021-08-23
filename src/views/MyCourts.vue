@@ -30,6 +30,7 @@
   margin-top: 200px;
   margin-left: 200px;
   margin-right: 200px;
+  font-family: "Besley", serif;
 }
 
 .description {

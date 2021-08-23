@@ -23,7 +23,7 @@ const routes = [
   { path: "/logout", name: "logout", component: Logout },
   { path: "/new", name: "create-court", component: CreateNew },
   { path: "/mycourts", name: "my-courts", component: MyCourts },
-  { path: "/courts/:id", name: "courts-show", component: CourtsShow },
+  { path: "/:id", name: "courts-show", component: CourtsShow },
   { path: "/courts/:id/edit", name: "court-edit", component: CourtEdit },
   { path: "/", name: "homepage", component: Homepage },
 ];

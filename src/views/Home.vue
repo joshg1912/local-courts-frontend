@@ -11,7 +11,7 @@
         <div class="description text-center">
           <h1>
             <hr />
-            <router-link v-bind:to="`/courts/${court.id}`" class="link">
+            <router-link v-bind:to="`/${court.id}`" class="link">
               {{ court.name }}
             </router-link>
           </h1>
@@ -24,6 +24,10 @@
 </template>
 
 <style>
+.text-primary {
+  font-family: "Besley", serif;
+}
+
 #map {
   height: 400px;
   width: auto;
@@ -92,12 +96,12 @@ export default {
         if (!features.length) {
           return;
         }
+
         var feature = features[0];
+        console.log(feature);
         var popup = new mapboxgl.Popup({ offset: [0, -15] })
           .setLngLat(feature.geometry.coordinates)
-          .setHTML(
-            "<h3>" + feature.properties.title + "<hr />" + "<h3>" + "<p>" + feature.properties.description + "</p>"
-          )
+          .setHTML("<h3>" + feature.properties.title + "</h3>" + feature.properties.description + "</p>")
           .addTo(map);
         popup.addTo(map);
       });

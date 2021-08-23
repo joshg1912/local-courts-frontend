@@ -6,6 +6,8 @@
       <p class="text-primary">Facility: {{ court.facility }}</p>
       <p class="text-primary">Lights: {{ court.lights }}</p>
       <p class="text-primary">Address: {{ court.address }}. Austin, TX</p>
+      <p class="text-primary">Zipcode: {{ court.zipcode }}</p>
+
       <p v-if="$parent.getUserId() == court.user_id">
         <router-link v-bind:to="`/courts/${court.id}/edit`">
           <button class="btn btn-primary btn-round">Edit Court</button>
@@ -19,7 +21,7 @@
         <img v-bind:src="imageurl[4]" />
         <!-- this is St Edwards -->
       </p>
-      <p v-if="34 === court.id">
+      <p v-if="33 === court.id">
         <img v-bind:src="imageurl[6]" />
         <!-- this is Akins HS -->
       </p>
@@ -60,8 +62,17 @@
   </div>
 </template>
 <style>
+.text-primary {
+  font-family: "Besley", serif;
+}
 .link {
   color: rgb(0, 138, 73);
+}
+
+.info {
+  margin-left: auto;
+  width: 400px;
+  height: 740px;
 }
 </style>
 <script>
