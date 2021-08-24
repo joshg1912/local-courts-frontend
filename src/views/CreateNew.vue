@@ -3,11 +3,13 @@
     <div class="row">
       <div class="col-lg-4 col-md-6 mx-auto">
         <div class="card card-login">
-          <ul>
-            <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-          </ul>
           <form v-on:click.prevent="createCourt()" class="form">
             <p class="description text-center">Create A Court</p>
+            <div class="errors">
+              <ul>
+                <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+              </ul>
+            </div>
             <div class="card-body">
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -75,7 +77,11 @@
   </div>
   <!-- </div> -->
 </template>
-<style></style>
+<style>
+.errors {
+  color: red;
+}
+</style>
 <script>
 import axios from "axios";
 

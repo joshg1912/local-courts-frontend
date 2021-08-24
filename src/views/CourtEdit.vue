@@ -67,7 +67,7 @@ export default {
     updateCourt: function () {
       axios.patch(`/courts/${this.$route.params.id}`, this.currentCourtParams).then((response) => {
         console.log(response.data);
-        this.$router.push(`/courts/${response.data.id}`);
+        this.$router.push(`/${response.data.id}`);
       });
     },
     destroyCourt: function () {

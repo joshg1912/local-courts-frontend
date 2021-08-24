@@ -26,7 +26,7 @@
             <li v-if="!isLoggedIn()" class="nav-item">
               <a class="nav-link" href="/signup">
                 <i class="material-icons">assignment_ind</i>
-                Signup
+                Signup to add courts
               </a>
             </li>
 
