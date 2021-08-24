@@ -101,7 +101,13 @@ export default {
         console.log(feature);
         var popup = new mapboxgl.Popup({ offset: [0, -15] })
           .setLngLat(feature.geometry.coordinates)
-          .setHTML("<h3>" + feature.properties.title + "</h3>" + feature.properties.description + "</p>")
+          .setHTML(
+            `<h3><a href=${feature.properties.id}>` +
+              feature.properties.title +
+              "</a></h3>" +
+              feature.properties.description +
+              "</p>"
+          )
           .addTo(map);
         popup.addTo(map);
       });

@@ -1,12 +1,11 @@
 <template>
-  <!-- <div
-    class="section section-signup page-header header-filter clear-filter purple-filter"
-    style="background-image: url('./assets/img/background2.png')"
-  > -->
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6 mx-auto">
         <div class="card card-login">
+          <ul>
+            <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+          </ul>
           <form v-on:click.prevent="createCourt()" class="form">
             <p class="description text-center">Create A Court</p>
             <div class="card-body">
@@ -98,6 +97,7 @@ export default {
         })
         .catch((error) => {
           this.status = error.response.status;
+          this.errors = error.response.data.errors;
         });
     },
   },
