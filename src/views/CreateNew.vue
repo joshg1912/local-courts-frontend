@@ -18,7 +18,12 @@
                   </span>
                 </div>
 
-                <input type="text" class="form-control" placeholder="Court Name" v-model="newCourtParams.name" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Court Name"
+                  v-model="newCourtParams.name"
+                />
               </div>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -40,7 +45,12 @@
                     <i class="material-icons">label_important</i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Fees" v-model="newCourtParams.fees" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Fees"
+                  v-model="newCourtParams.fees"
+                />
               </div>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -48,7 +58,12 @@
                     <i class="material-icons">label_important</i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Lights" v-model="newCourtParams.lights" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Lights"
+                  v-model="newCourtParams.lights"
+                />
               </div>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -56,7 +71,12 @@
                     <i class="material-icons">label_important</i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Address" v-model="newCourtParams.address" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Address"
+                  v-model="newCourtParams.address"
+                />
               </div>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -64,7 +84,12 @@
                     <i class="material-icons">label_important</i>
                   </span>
                 </div>
-                <input type="text" class="form-control" placeholder="Zipcode" v-model="newCourtParams.zipcode" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Zipcode"
+                  v-model="newCourtParams.zipcode"
+                />
               </div>
             </div>
             <div class="footer text-center">

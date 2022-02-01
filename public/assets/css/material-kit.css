@@ -4763,12 +4763,12 @@ tbody.collapse.show {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
@@ -4779,7 +4779,7 @@ tbody.collapse.show {
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #fff;
+  color: rgb(7, 7, 7);
 }
 
 .navbar-dark .navbar-toggler {

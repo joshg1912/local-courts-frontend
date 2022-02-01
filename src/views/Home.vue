@@ -7,7 +7,16 @@
       </div>
     </div>
     <div class="main main-raised mt-auto">
-      <div v-for="court in filterBy(courts, searchFilter, 'zipcode', 'name', 'lights')" :key="court.id">
+      <div
+        v-for="court in filterBy(
+          courts,
+          searchFilter,
+          'zipcode',
+          'name',
+          'lights'
+        )"
+        :key="court.id"
+      >
         <div class="description text-center">
           <h1>
             <hr />

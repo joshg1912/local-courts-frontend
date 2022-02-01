@@ -19,7 +19,14 @@
             </router-link>
           </div>
         </div>
-        <p><router-link to="/courts" tag="button" class="btn btn-primary btn-round">Back</router-link></p>
+        <p>
+          <router-link
+            to="/courts"
+            tag="button"
+            class="btn btn-primary btn-round"
+            >Back</router-link
+          >
+        </p>
       </div>
     </div>
   </div>

@@ -16,7 +16,12 @@
                     <i class="material-icons">perm_identity</i>
                   </span>
                 </div>
-                <input type="name" class="form-control" placeholder="Name" v-model="newUserParams.name" />
+                <input
+                  type="name"
+                  class="form-control"
+                  placeholder="Name"
+                  v-model="newUserParams.name"
+                />
               </div>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -24,7 +29,12 @@
                     <i class="material-icons">mail</i>
                   </span>
                 </div>
-                <input type="email" class="form-control" placeholder="Email" v-model="newUserParams.email" />
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  v-model="newUserParams.email"
+                />
               </div>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -32,7 +42,12 @@
                     <i class="material-icons">lock_outline</i>
                   </span>
                 </div>
-                <input type="password" class="form-control" placeholder="Password" v-model="newUserParams.password" />
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  v-model="newUserParams.password"
+                />
               </div>
               <div class="input-group">
                 <div class="input-group-prepend">
@@ -49,7 +64,9 @@
               </div>
             </div>
             <div class="footer text-center">
-              <button v-on:click="submit()" class="btn btn-primary">Signup</button>
+              <button v-on:click="submit()" class="btn btn-primary">
+                Signup
+              </button>
             </div>
           </form>
         </div>

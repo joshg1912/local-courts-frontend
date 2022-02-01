@@ -17,7 +17,12 @@
                       <i class="material-icons">mail</i>
                     </span>
                   </div>
-                  <input type="email" class="form-control" placeholder="Email" v-model="newSessionParams.email" />
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    v-model="newSessionParams.email"
+                  />
                 </div>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -34,7 +39,9 @@
                 </div>
               </div>
               <div class="footer text-center">
-                <button v-on:click="submit()" class="btn btn-primary">Login</button>
+                <button v-on:click="submit()" class="btn btn-primary">
+                  Login
+                </button>
               </div>
             </form>
           </div>
@@ -65,7 +72,8 @@ export default {
       axios
         .post("/sessions", this.newSessionParams)
         .then((response) => {
-          axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
+          axios.defaults.headers.common["Authorization"] =
+            "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
           localStorage.setItem("user_id", response.data.user_id);
           console.log(response.data);

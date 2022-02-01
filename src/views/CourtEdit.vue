@@ -32,8 +32,14 @@
             <input type="text" v-model="currentCourtParams.zipcode" />
           </div>
 
-          <input type="submit" value="Update Info" class="btn btn-primary btn-round" />
-          <button v-on:click="destroyCourt()" class="btn btn-primary btn-round">Delete Court</button>
+          <input
+            type="submit"
+            value="Update Info"
+            class="btn btn-primary btn-round"
+          />
+          <button v-on:click="destroyCourt()" class="btn btn-primary btn-round">
+            Delete Court
+          </button>
         </form>
       </div>
     </div>
@@ -65,10 +71,12 @@ export default {
   },
   methods: {
     updateCourt: function () {
-      axios.patch(`/courts/${this.$route.params.id}`, this.currentCourtParams).then((response) => {
-        console.log(response.data);
-        this.$router.push(`/${response.data.id}`);
-      });
+      axios
+        .patch(`/courts/${this.$route.params.id}`, this.currentCourtParams)
+        .then((response) => {
+          console.log(response.data);
+          this.$router.push(`/${response.data.id}`);
+        });
     },
     destroyCourt: function () {
       var result = confirm("Delete Court?");

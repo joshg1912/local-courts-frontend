@@ -10,7 +10,9 @@
           <div class="brand">
             <h1>Welcome To Local Courts</h1>
             <!-- <h3>find courts in your area</h3> -->
-            <button v-on:click="goTo()" class="btn btn-primary btn-round">Find Courts</button>
+            <button v-on:click="goTo()" class="btn btn-primary btn-round">
+              Find Courts
+            </button>
           </div>
         </div>
       </div>

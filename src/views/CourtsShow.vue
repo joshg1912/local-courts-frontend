@@ -2,7 +2,7 @@
   <div class="info">
     <div class="main main-raised text-center mt-auto mr-auto ml-auto">
       <h1 class="link">{{ court.name }}</h1>
-      <p class="text-primary">Fees: ${{ court.fees }}</p>
+      <p class="text-primary">Fees: {{ court.fees }}</p>
       <p class="text-primary">Facility: {{ court.facility }}</p>
       <p class="text-primary">Lights: {{ court.lights }}</p>
       <p class="text-primary">Address: {{ court.address }}. Austin, TX</p>
@@ -13,7 +13,8 @@
           <button class="btn btn-primary btn-round">Edit Court</button>
         </router-link>
       </p>
-      <p v-if="17 === court.id">
+      <p v-if="9 === court.id">
+        <!-- this is Crockett Hs -->
         <!-- <img v-bind:src="imageurl[3]" /> -->
         <img
           v-bind:src="
@@ -21,9 +22,9 @@
             key.api
           "
         />
-        <!-- this is Crockett Hs -->
       </p>
-      <p v-if="18 === court.id">
+      <p v-if="6 === court.id">
+        <!-- this is St Edwards -->
         <!-- <img v-bind:src="imageurl[4]" /> -->
         <img
           v-bind:src="
@@ -31,9 +32,9 @@
             key.api
           "
         />
-        <!-- this is St Edwards -->
       </p>
-      <p v-if="33 === court.id">
+      <p v-if="10 === court.id">
+        <!-- this is Akins HS -->
         <!-- <img v-bind:src="imageurl[6]" /> -->
         <img
           v-bind:src="
@@ -41,9 +42,9 @@
             key.api
           "
         />
-        <!-- this is Akins HS -->
       </p>
-      <p v-if="20 === court.id">
+      <p v-if="11 === court.id">
+         <!-- this is Bowie HS -->
         <!-- <img v-bind:src="imageurl[9]" /> -->
         <img
           v-bind:src="
@@ -51,9 +52,9 @@
             key.api
           "
         />
-        <!-- this is Bowie HS -->
       </p>
-      <p v-if="21 === court.id">
+      <p v-if="7 === court.id">
+        <!-- this is Joslin Park -->
         <!-- <img v-bind:src="imageurl[1]" /> -->
         <img
           v-bind:src="
@@ -61,9 +62,9 @@
             key.api
           "
         />
-        <!-- this is Joslin Park -->
       </p>
-      <p v-if="22 === court.id">
+      <p v-if="16 === court.id">
+        <!-- this is Ojeda MS -->
         <!-- <img v-bind:src="imageurl[5]" /> -->
         <img
           v-bind:src="
@@ -71,9 +72,9 @@
             key.api
           "
         />
-        <!-- this is Ojeda MS -->
       </p>
-      <p v-if="23 === court.id">
+      <p v-if="8 === court.id">
+        <!-- this is Mendez MS -->
         <!-- <img v-bind:src="imageurl[10]" /> -->
         <img
           v-bind:src="
@@ -81,9 +82,9 @@
             key.api
           "
         />
-        <!-- this is Mendez MS -->
       </p>
-      <p v-if="3 === court.id">
+      <p v-if="13 === court.id">
+        <!-- this is West Austin Park -->
         <!-- <img v-bind:src="imageurl[0]" /> -->
         <img
           v-bind:src="
@@ -91,9 +92,9 @@
             key.api
           "
         />
-        <!-- this is West Austin Park -->
       </p>
-      <p v-if="24 === court.id">
+      <p v-if="12 === court.id">
+         <!-- this is Covington MS -->
         <!-- <img v-bind:src="imageurl[7]" /> -->
         <img
           v-bind:src="
@@ -101,9 +102,9 @@
             key.api
           "
         />
-        <!-- this is Covington MS -->
       </p>
-      <p v-if="5 === court.id">
+      <p v-if="14 === court.id">
+        <!-- this is South Austin P&R -->
         <!-- <img v-bind:src="imageurl[2]" /> -->
         <img
           v-bind:src="
@@ -111,9 +112,9 @@
             key.api
           "
         />
-        <!-- this is South Austin P&R -->
       </p>
-      <p v-if="6 === court.id">
+      <p v-if="15 === court.id">
+        <!-- this is Anderson High -->
         <!-- <img v-bind:src="imageurl[8]" /> -->
         <img
           v-bind:src="
@@ -121,9 +122,12 @@
             key.api
           "
         />
-        <!-- this is Anderson High -->
       </p>
-      <p><router-link to="/courts" tag="button" class="btn btn-primary btn-round">Back</router-link></p>
+      <p>
+        <router-link to="/courts" tag="button" class="btn btn-primary btn-round"
+          >Back</router-link
+        >
+      </p>
     </div>
   </div>
 </template>

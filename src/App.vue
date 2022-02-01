@@ -1,14 +1,18 @@
 <template>
   <div id="app">
     <nav
-      class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg"
+      class="
+        navbar navbar-transparent navbar-color-on-scroll
+        fixed-top
+        navbar-expand-lg
+      "
       color-on-scroll="100"
       id="sectionsNav"
     >
       <div class="container">
         <div class="navbar-translate">
           <a class="navbar-brand" href="/courts">Local Courts</a>
-          <!-- <button
+          <button
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -19,7 +23,7 @@
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
             <span class="navbar-toggler-icon"></span>
-          </button> -->
+          </button>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
@@ -29,7 +33,6 @@
                 Signup to add courts
               </a>
             </li>
-
             <li v-if="!isLoggedIn()" class="nav-item">
               <a class="nav-link" href="/login">
                 <i class="material-icons">login</i>
