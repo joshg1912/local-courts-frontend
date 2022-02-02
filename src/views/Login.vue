@@ -70,7 +70,7 @@ export default {
   methods: {
     submit: function () {
       axios
-        .post("https://guarded-plateau-03969.herokuapp.com/sessions", this.newSessionParams)
+        .post("/sessions", this.newSessionParams)
         .then((response) => {
           axios.defaults.headers.common["Authorization"] =
             "Bearer " + response.data.jwt;
