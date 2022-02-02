@@ -53,7 +53,7 @@
           "
         />
       </p>
-      <p v-if="7 === court.id">
+      <p v-if="11 === court.id">
         <!-- this is Joslin Park -->
         <!-- <img v-bind:src="imageurl[1]" /> -->
         <img
@@ -63,7 +63,7 @@
           "
         />
       </p>
-      <p v-if="1 === court.id">
+      <p v-if="7 === court.id">
         <!-- this is Ojeda MS -->
         <!-- <img v-bind:src="imageurl[5]" /> -->
         <img
@@ -113,7 +113,7 @@
           "
         />
       </p>
-      <p v-if="11 === court.id">
+      <p v-if="1 === court.id">
         <!-- this is Anderson High -->
         <!-- <img v-bind:src="imageurl[8]" /> -->
         <img
