@@ -75,7 +75,9 @@ export default {
   mixins: [Vue2Filters.mixin],
   methods: {
     indexCourts: function () {
-      axios.get("https://guarded-plateau-03969.herokuapp.com//courts").then((response) => {
+      axios
+        .get("https://guarded-plateau-03969.herokuapp.com/courts")
+        .then((response) => {
         this.courts = response.data;
         console.log("All Courts:", this.courts);
       });
