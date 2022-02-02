@@ -5,7 +5,7 @@ import axios from "axios";
 import Vue2Filters from "vue2-filters";
 
 axios.defaults.baseURL =
-  process.env.NODE_ENV === "development"
+  process.env.NODE_ENV === "production"
     ? "https://guarded-plateau-03969.herokuapp.com"
     : "/";
 
