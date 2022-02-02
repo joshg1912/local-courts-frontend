@@ -13,7 +13,7 @@
           <button class="btn btn-primary btn-round">Edit Court</button>
         </router-link>
       </p>
-      <p v-if="9 === court.id">
+      <p v-if="5 === court.id">
         <!-- this is Crockett Hs -->
         <!-- <img v-bind:src="imageurl[3]" /> -->
         <img
@@ -23,7 +23,7 @@
           "
         />
       </p>
-      <p v-if="6 === court.id">
+      <p v-if="8 === court.id">
         <!-- this is St Edwards -->
         <!-- <img v-bind:src="imageurl[4]" /> -->
         <img
@@ -33,7 +33,7 @@
           "
         />
       </p>
-      <p v-if="10 === court.id">
+      <p v-if="2 === court.id">
         <!-- this is Akins HS -->
         <!-- <img v-bind:src="imageurl[6]" /> -->
         <img
@@ -43,7 +43,7 @@
           "
         />
       </p>
-      <p v-if="11 === court.id">
+      <p v-if="3 === court.id">
          <!-- this is Bowie HS -->
         <!-- <img v-bind:src="imageurl[9]" /> -->
         <img
@@ -63,7 +63,7 @@
           "
         />
       </p>
-      <p v-if="16 === court.id">
+      <p v-if="1 === court.id">
         <!-- this is Ojeda MS -->
         <!-- <img v-bind:src="imageurl[5]" /> -->
         <img
@@ -73,7 +73,7 @@
           "
         />
       </p>
-      <p v-if="8 === court.id">
+      <p v-if="6 === court.id">
         <!-- this is Mendez MS -->
         <!-- <img v-bind:src="imageurl[10]" /> -->
         <img
@@ -83,7 +83,7 @@
           "
         />
       </p>
-      <p v-if="13 === court.id">
+      <p v-if="10 === court.id">
         <!-- this is West Austin Park -->
         <!-- <img v-bind:src="imageurl[0]" /> -->
         <img
@@ -93,7 +93,7 @@
           "
         />
       </p>
-      <p v-if="12 === court.id">
+      <p v-if="4 === court.id">
          <!-- this is Covington MS -->
         <!-- <img v-bind:src="imageurl[7]" /> -->
         <img
@@ -103,7 +103,7 @@
           "
         />
       </p>
-      <p v-if="14 === court.id">
+      <p v-if="9 === court.id">
         <!-- this is South Austin P&R -->
         <!-- <img v-bind:src="imageurl[2]" /> -->
         <img
@@ -113,7 +113,7 @@
           "
         />
       </p>
-      <p v-if="15 === court.id">
+      <p v-if="11 === court.id">
         <!-- this is Anderson High -->
         <!-- <img v-bind:src="imageurl[8]" /> -->
         <img
